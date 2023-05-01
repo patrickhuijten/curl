@@ -1,46 +1,46 @@
-name: 'cURL AxiosJS'
-description: 'cURL action to perform REST API based on Axios'
+name: "cURL AxiosJS"
+description: "cURL action to perform REST API based on Axios"
 inputs:
-  url: 
-    description: 'The target url'
+  url:
+    description: "The target url"
   method:
-    description: 'The request method, basically one of GET, POST, PUT, PATCH'
-    default: 'GET'
+    description: "The request method, basically one of GET, POST, PUT, PATCH"
+    default: "GET"
   accept:
-    description: 'List of status codes to be accepted, else it is considerred to be failed'
+    description: "List of status codes to be accepted, else it is considerred to be failed"
     default: 200,201,204
   headers:
-    description: 'Headers object'
+    description: "Headers object"
   params:
-    description: 'Params object'
+    description: "Params object"
   body:
-    description: 'Body object'
+    description: "Body object"
   timeout:
-    description: 'timeout (millisec)'
+    description: "timeout (millisec)"
     default: 1000
   basic-auth-token:
-    description: 'Basic authentication token, format =>  username:password as base64'
-  bearer-token: 
-    description: 'Bearer Token'
+    description: "Basic authentication token, format =>  username:password as base64"
+  bearer-token:
+    description: "Bearer Token"
   proxy-url:
-    description: 'Proxy host, format =>  host:port'
-  proxy-auth-token: 
-    description: 'Proxy authentication token, format =>  username:password as base64'
-  log-response: 
-    description: 'Should log the response'
-    default: 'false'
+    description: "Proxy host, format =>  host:port"
+  proxy-auth-token:
+    description: "Proxy authentication token, format =>  username:password as base64"
+  log-response:
+    description: "Should log the response"
+    default: "false"
   retries:
-    description: 'retries number'
+    description: "retries number"
     default: 1
   custom-config:
     description: custom config
 
 outputs:
   response:
-    description: 'The response object'
+    description: "The response object"
 branding:
-  icon: 'download'  
-  color: 'gray-dark'
+  icon: "download"
+  color: "gray-dark"
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
